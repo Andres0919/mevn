@@ -3,8 +3,9 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 
 const app = express();
+
 mongoose.connect('mongodb://localhost/mevn-database')
-    .then(db => console.log('DB is conected'))
+    .then(db => console.log(db, 'DB is conected'))
     .catch(err => console.log(err)); 
 
 //Settings
